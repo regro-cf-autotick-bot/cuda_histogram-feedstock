@@ -5,7 +5,7 @@
 
 [workspace]
 name = "cuda_histogram-feedstock"
-version = "2026.9.23"  # conda-smithy version used to generate this file
+version = "2026.10.24"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/cuda_histogram-feedstock"
 authors = ["@conda-forge/cuda_histogram"]
 channels = ["conda-forge"]
@@ -73,6 +73,15 @@ description = "Debug cuda_histogram-feedstock with variant linux_64_python3.14._
 [feature.build.tasks."inspect-linux_64_python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
 description = "List contents of cuda_histogram-feedstock packages built for variant linux_64_python3.14.____cp314"
+[feature.build.tasks."build-linux_64_python3.15.____cp315"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.15.____cp315.yaml --target-platform linux-64"
+description = "Build cuda_histogram-feedstock with variant linux_64_python3.15.____cp315 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_python3.15.____cp315"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_python3.15.____cp315.yaml --target-platform linux-64"
+description = "Debug cuda_histogram-feedstock with variant linux_64_python3.15.____cp315 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_python3.15.____cp315"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.15.____cp315.yaml"
+description = "List contents of cuda_histogram-feedstock packages built for variant linux_64_python3.15.____cp315"
 [feature.build.tasks."build-linux_aarch64_python3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml --target-platform linux-aarch64"
 description = "Build cuda_histogram-feedstock with variant linux_aarch64_python3.11.____cpython directly (without setup scripts)"
@@ -109,6 +118,15 @@ description = "Debug cuda_histogram-feedstock with variant linux_aarch64_python3
 [feature.build.tasks."inspect-linux_aarch64_python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.14.____cp314.yaml"
 description = "List contents of cuda_histogram-feedstock packages built for variant linux_aarch64_python3.14.____cp314"
+[feature.build.tasks."build-linux_aarch64_python3.15.____cp315"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.15.____cp315.yaml --target-platform linux-aarch64"
+description = "Build cuda_histogram-feedstock with variant linux_aarch64_python3.15.____cp315 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_python3.15.____cp315"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_python3.15.____cp315.yaml --target-platform linux-aarch64"
+description = "Debug cuda_histogram-feedstock with variant linux_aarch64_python3.15.____cp315 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_python3.15.____cp315"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.15.____cp315.yaml"
+description = "List contents of cuda_histogram-feedstock packages built for variant linux_aarch64_python3.15.____cp315"
 
 [environments]
 build = ["build"]
